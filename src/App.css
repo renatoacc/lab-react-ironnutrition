@@ -7,12 +7,42 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.show{
+  display:contents;
+}
+
+.hide{
+  display: none;
+}
+
+#show{
+  display:inline-block;
+}
+
+#hide{
+  display: none;
+}
+
 .form{
-  margin-left: 10%;
-  width: 80%;
+  margin-left: 5%;
+  width: 90%;
+  text-align: left;
+}
+#buttonCreate{
+  margin-top: 2%;
+  margin-left: 80%;
+}
+
+#addFoodTitle{
+  text-align: center;
+}
+
+.search{
+  margin-left: 5%;
+  width: 90%;
   text-align: left;
 }
 
-#addFood{
+#searchTitle{
   text-align: center;
 }

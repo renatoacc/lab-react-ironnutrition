@@ -1,6 +1,6 @@
 import { Card, Col, Button } from 'antd';
 
-export default function FooBox({ food }) {
+export default function FoodBox({ food, handleDelete }) {
   return (
     <Col>
       <Card title={food.name} style={{ width: 230, height: 300, margin: 10 }}>
@@ -10,7 +10,9 @@ export default function FooBox({ food }) {
         <p>
           <b>Total Calories: {food.calories * food.servings} </b> kcal
         </p>
-        <Button type="primary"> Delete </Button>
+        <Button type="primary" onClick={handleDelete}>
+          Delete
+        </Button>
       </Card>
     </Col>
   );
