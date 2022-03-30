@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import foodsList from './foods.json';
 
 function App() {
+  const [foods, setFoods] = useState(foodsList);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>Food List</h2>
+      {foods.map((food) => {
+        return (
+          <div>
+            <p> {food.name} </p>
+            <img src={food.image} alt={food.name} width={100} />
+          </div>
+        );
+      })}
+    </>
   );
 }
 
